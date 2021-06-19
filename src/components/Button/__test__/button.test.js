@@ -22,8 +22,3 @@ it("matches snapshot", () => {
   const tree = renderer.create(<Button label="save" />).toJSON();
   expect(tree).toMatchSnapshot();
 });
-
-it("matches snapshot", () => {
-  const tree = renderer.create(<Button label=" world" />).toJSON();
-  expect(tree).toMatchSnapshot();
-});

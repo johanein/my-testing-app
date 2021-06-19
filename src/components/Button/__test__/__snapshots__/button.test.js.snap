@@ -9,13 +9,3 @@ exports[`matches snapshot 1`] = `
   save
 </div>
 `;
-
-exports[`matches snapshot 2`] = `
-<div
-  className="button_style"
-  data-testid="button"
->
-  Hi 
-   world
-</div>
-`;
