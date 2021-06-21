@@ -14,23 +14,23 @@ const index = memo(() => {
   }, [uuid, dispatch]);
 
   return (
-    <div id={style.card} class="card m-5 w-100 h-100 bg-141619 overflow-auto">
+    <div id={style.card} class="card m-5 w-100 h-100">
       <div class="card-body">
         <h5 class="card-title h2 text-white text-center">
           <span id={style.title} className="rounded-pill p-2 pb-3 text-center">
             Job details
           </span>
         </h5>
+        <div id={style.detail} className="container-md">
         {Object.entries(jobDetails).map(([key, value]) => (
-          <div className="container-md">
             <div id={style.eachRow} className="row m-5 p-2 rounded-pill g-2">
               <div id={style.key} className="col-xxl-6 col-lg-4  text-white h5">
                 {key}
               </div>
               <div className="col-xxl-6 col-lg-8 text-white">{value}</div>
             </div>
-          </div>
         ))}
+        </div>
         <Link
           className="btn btn-danger"
           to={{

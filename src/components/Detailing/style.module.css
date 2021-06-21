@@ -2,6 +2,10 @@
     background: var(--bg);
 
 }
+#detail{
+    height: 80vh;
+    overflow: auto;
+}
 #title{
     background: var(--bgImgGrad);
 }
