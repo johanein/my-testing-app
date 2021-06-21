@@ -1,0 +1,20 @@
+#card{
+    background: var(--bg);
+
+}
+#title{
+    background: var(--bgImgGrad);
+}
+#eachRow{
+    background: var(--bgImgGrad);
+}
+
+#key{
+    border-right-style: solid
+}
+
+@media only screen and (max-width: 992px) {
+    #key{
+        border-right-style: none
+    }
+}

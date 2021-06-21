@@ -1,0 +1,11 @@
+
+#titleSpan {
+  background: var(--bgImgGrad);
+}
+
+#list {
+    height: 78vh;
+}
+#linkList {
+    height: 5vh;
+}

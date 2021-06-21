@@ -1,5 +1,7 @@
 import React, { memo, useReducer } from "react";
-import MainJobListingPage from "./MainPage";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import Routes from "./Routes";
 import { appReducer, initialState, Provider } from "../Reducers";
 
 // http://api.dataatwork.org/v1/jobs
@@ -12,7 +14,9 @@ const index = memo((props) => {
   const [state, dispatch] = useReducer(appReducer, initialState);
   return (
     <Provider value={{ state, dispatch }}>
-      <MainJobListingPage />
+      <Router>
+          <Routes />
+      </Router>
     </Provider>
   );
 });
