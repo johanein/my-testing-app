@@ -11,7 +11,9 @@ const functions = {
   fetchUsers: () =>
     axios
       .get("https://jsonplaceholder.typicode.com/users/1")
-      .then((json) => json.data),
+      .then((json) => json.data)
+      .catch((error) => error),
+  reverseString: (str) => str.split("").reverse().join(""),
 };
 
 export default functions;

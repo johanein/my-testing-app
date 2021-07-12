@@ -1,5 +1,29 @@
 import functions from "./functions";
 
+const initDatabase = () => console.log("initDatabase");
+
+const closeDatabase = () => console.log("closeDatabase");
+
+// beforeEach(() => initDatabase());
+// afterEach(() => closeDatabase());
+beforeAll(() => initDatabase());
+afterAll(() => closeDatabase());
+
+const nameCheck = () => console.log("checking name ...");
+
+describe("Check names", () => {
+  beforeEach(() => nameCheck());
+
+  test("User is Albert", () => {
+    const name = "albert";
+    expect(name).toBe("albert");
+  });
+  test("User is Lify", () => {
+    const name = "lify";
+    expect(name).toBe("lify");
+  });
+});
+
 test("add 2 + 2 equal to 4", () => {
   expect(functions.add(2, 2)).toBe(4);
 });
@@ -42,17 +66,27 @@ test("Array should should contain Admin", () => {
 });
 
 // promise fetch calls
-test("name in data should match Leanne Graham", () => {
-  expect.assertions(1);
-  return functions.fetchUsers().then((data) => {
-    expect(data.name).toEqual("Leanne Graham");
-  });
-});
+// test("name in data should match Leanne Graham", () => {
+//   expect.assertions(1);
+//   return functions.fetchUsers().then((data) => {
+//     expect(data.name).toEqual("Leanne Graham");
+//   });
+// });
 
 // Async fetch calls
 
-test("name in data should match Leanne Graham asynchronously", async () => {
-  expect.assertions(1);
-  const data = await functions.fetchUsers();
-  expect(data.name).toEqual("Leanne Graham");
+// test("name in data should match Leanne Graham asynchronously", async () => {
+//   expect.assertions(1);
+//   const data = await functions.fetchUsers();
+//   expect(data.name).toEqual("Leanne Graham");
+// });
+
+// reverse string
+
+test("reverseString function should exist", () => {
+  expect(functions.reverseString).toBeDefined();
+});
+
+test("string should reverse", () => {
+  expect(functions.reverseString("hello")).toBe("olleh");
 });
