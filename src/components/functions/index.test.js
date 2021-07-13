@@ -1,4 +1,4 @@
-import functions from "./functions";
+import functions from "./index";
 
 const initDatabase = () => console.log("initDatabase");
 
